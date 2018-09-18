@@ -1,8 +1,8 @@
 package com.globant.app;
-
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+
 
 /**
  * Unit test for simple App.
@@ -31,8 +31,11 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+    
     public void testApp()
     {
         assertTrue( true );
+        assertEquals( App.getTestGreeting(), "Hello, im your first Maven App!" );
+        assertEquals( App.getTestGreeting2(), "Hello, this is the second greeting, Welcome!" );
     }
 }

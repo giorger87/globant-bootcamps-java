@@ -24,12 +24,7 @@ public class Main {
 	      Person p = object.getPerson(num2);
 	      System.out.println("gender " + p.getGender());
       
-	      // swiching different connection types (comment previous code to test)
-	      System.out.println("write your connection type (SQL/ NOSQL)");
-	      String ConType = scanner.nextLine();
-	      ConnFactory = Producer.getFactory("Connection");
-	      Connection newCon= ConnFactory.getConnType(ConType);
-	      newCon.connect();
+	   
 	      // proxy for SlowThing Class
 	      
 	      

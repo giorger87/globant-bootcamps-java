@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.globant.app</groupId>
 	<artifactId>my-app</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
@@ -56,7 +56,7 @@
 
 	<profiles>
 		<profile>
-			<id>Dev</id>
+			<id>Env-Dev</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
@@ -66,7 +66,7 @@
 					<resource>
 						<directory>src/main/resources</directory>
 						<excludes>
-							<exclude>prod.properties</exclude>
+							<exclude>env-dev.properties</exclude>
 						</excludes>
 					</resource>
 				</resources>
@@ -74,13 +74,13 @@
 		</profile>
 
 		<profile>
-			<id>Prod</id>
+			<id>Env-QA</id>
 			<build>
 				<resources>
 					<resource>
 						<directory>src/main/resources</directory>
 						<excludes>
-							<exclude>dev.properties</exclude>
+							<exclude>env-qa.properties</exclude>
 						</excludes>
 					</resource>
 				</resources>

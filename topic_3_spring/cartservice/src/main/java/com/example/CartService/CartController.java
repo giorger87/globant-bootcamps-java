@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 @RestController
 public class CartController {
 
@@ -16,12 +15,12 @@ public class CartController {
     private final MockedCart DB = new MockedCart();
     
     // listar carrito entero
-  //  @GetMapping("/getfullcart")
-  //  public Product getcart(@RequestParam(value="id", defaultValue="0") int id) {
+    @GetMapping("/getfullcart")
+    Object[] getcart(@RequestParam(value="id", defaultValue="0") int id) {
     	
-     //   return DB.mockedDB.();
+        return DB.findAll();
       
-   // }
+    }
     @GetMapping("/getoneproduct")
     public Product getone(@RequestParam(value="id", defaultValue="0") int id) {
     	
@@ -30,6 +29,7 @@ public class CartController {
     }
   //  hacer el post
     //@PostMapping("/addproduct")
+    
     
     
 }

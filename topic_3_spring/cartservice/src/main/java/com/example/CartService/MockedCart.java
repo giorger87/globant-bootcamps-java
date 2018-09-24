@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
  
-public class MockedCart {
+public class MockedCart{
 	List<Product> mockedDB = new ArrayList<Product>();
 
 	public MockedCart() {
@@ -34,5 +34,11 @@ public class MockedCart {
 		mockedDB.add(p2);
 		mockedDB.add(p3);
 
+	}
+	//hacerle override del tostring
+	public Object[] findAll(){
+		return mockedDB.toArray();
+		
+		
 	}
 }

@@ -41,4 +41,6 @@ public class MockedCart{
 		
 		
 	}
+	//public MockedCart getInst() {
+	//	return this;}
 }

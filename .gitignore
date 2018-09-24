@@ -31,3 +31,8 @@ Users/
 
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
+
+#Maven
+
+
+.mvn/wrapper/maven-wrapper.jar

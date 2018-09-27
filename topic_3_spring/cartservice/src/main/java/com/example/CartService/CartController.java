@@ -15,20 +15,21 @@ public class CartController {
     private final MockedCart DB = new MockedCart();
     
     // listar carrito entero
-    @GetMapping("/getfullcart")
+    @GetMapping("/cart")
     Object[] getcart(@RequestParam(value="id", defaultValue="0") int id) {
     	
         return DB.findAll();
       
     }
-    @GetMapping("/getoneproduct")
+    @GetMapping("/cart")
     public Product getone(@RequestParam(value="id", defaultValue="0") int id) {
     	
         return DB.mockedDB.get(id);
       
     }
   //  hacer el post
-    //@PostMapping("/addproduct")
+   // @PostMapping("/cart/add")
+    //public 
     
     
     

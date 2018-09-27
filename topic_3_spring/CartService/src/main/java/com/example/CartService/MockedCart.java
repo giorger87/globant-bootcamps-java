@@ -41,6 +41,7 @@ public class MockedCart{
 		
 		
 	}
-	//public MockedCart getInst() {
-	//	return this;}
+	public void addProd(Product prod) {
+		mockedDB.add(prod);
+		}
 }
